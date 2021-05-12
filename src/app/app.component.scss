@@ -1,0 +1,28 @@
+.main-content {
+  width: 264px;
+  height: 704px;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+  background-color: white;
+
+  @media (min-width: 320px) {
+    width: 304px;
+  }
+
+  @media (min-width: 360px) {
+    width: 344px;
+  }
+
+  @media (min-width: 411px) {
+    width: 395px;
+  }
+
+  @media (min-width: 540px) {
+    width: 524px;
+  }
+
+  @media (min-width: 571px) {
+    width: 555px;
+  }
+}
