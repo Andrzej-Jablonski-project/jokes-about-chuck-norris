@@ -14,12 +14,7 @@ export class JokeComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.joke$ = this.dataService.getJoke();
   }
-
-  showJoke(){
-
-  }
-
 }
