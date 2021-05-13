@@ -1,1 +1,1 @@
-<p class="box-joke">{{showJoke()}}</p>
+<p class="box-joke" *ngIf="joke$ | async as joke">{{ joke.joke }}</p>

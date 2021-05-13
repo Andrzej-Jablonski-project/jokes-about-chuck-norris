@@ -16,7 +16,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getJoke(): Observable<Joke[]> {
-    return this.http.get<JokeResult>(`${this.API_BASE_URL}/jokes/ramdom`)
+    return this.http.get<JokeResult>(`${this.API_BASE_URL}/jokes/random`)
       .pipe(map(result => result.value));
   }
 }

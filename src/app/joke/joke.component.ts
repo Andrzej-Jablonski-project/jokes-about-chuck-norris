@@ -1,20 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Component, Input, OnInit } from '@angular/core';
 import { DataService } from './../services/data.service';
+import { Joke } from '../models/joke';
+
 @Component({
   selector: 'app-joke',
   templateUrl: './joke.component.html',
   styleUrls: ['./joke.component.scss']
 })
 export class JokeComponent implements OnInit {
-  joke = 'test';
 
-  constructor() { }
+  joke$: Observable<Joke[]>;
 
-  ngOnInit(): void {
+  constructor(private dataService: DataService) { }
+
+  ngOnInit() {
+    this.joke$ = this.dataService.getJoke();
   }
 
-  showJoke(): string{
-    return this.joke;
+  showJoke(){
+
   }
 
 }
