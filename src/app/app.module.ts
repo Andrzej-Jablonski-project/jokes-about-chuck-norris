@@ -6,6 +6,7 @@ import { PhotoComponent } from './photo/photo.component';
 import { JokeComponent } from './joke/joke.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { InputComponent } from './input/input.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { InputComponent } from './input/input.component';
     PhotoComponent,
     JokeComponent,
     CategoriesComponent,
-    InputComponent
+    InputComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule
