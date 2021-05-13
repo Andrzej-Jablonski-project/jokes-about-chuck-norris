@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./joke.component.scss']
 })
 export class JokeComponent implements OnInit {
+  joke = 'test';
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showJoke(): string{
+    return this.joke;
   }
 
 }
