@@ -1,0 +1,29 @@
+.select {
+  select {
+    width: 100%;
+    height: 58px;
+    margin-bottom: 16px;
+    padding: 16px;
+    appearance: none;
+    color: #c4c4c4;
+    background-color: #ffffff;
+    font-family: inherit;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: -0.52px;
+    text-align: left;
+    cursor: inherit;
+    border-radius: 8px;
+    border: solid 1px #c4c4c4;
+
+    &:after {
+      content: "";
+      width: 0.8em;
+      height: 0.5em;
+      background-color: var(--select-arrow);
+      clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    }
+  }
+}
