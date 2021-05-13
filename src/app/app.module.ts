@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { PhotoComponent } from './photo/photo.component';
 import { JokeComponent } from './joke/joke.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { InputComponent } from './input/input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PhotoComponent,
     JokeComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule
