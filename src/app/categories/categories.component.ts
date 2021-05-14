@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
-
+  categories = [
+    { name: 'Explicit' },
+    { name: 'Nerdy' },
+  ];
   constructor() { }
 
   ngOnInit(): void {

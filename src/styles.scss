@@ -57,3 +57,109 @@ body {
     padding: 8px 0;
   }
 }
+
+.ng-select.main {
+  width: 94%;
+  height: 58px;
+  margin: 0 8px 16px;
+  font-family: inherit;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: -0.52px;
+  text-align: left;
+  cursor: inherit;
+  border-radius: 6px;
+  color: #c4c4c4;
+  background-color: #ffffff;
+
+  @media (min-width: 555px) {
+    width: 100%;
+    margin: 0 0 16px;
+  }
+}
+
+/* start | style for categories component */
+
+.ng-select.main {
+  &:focus {
+    outline: none;
+    border-radius: 6px;
+    border: solid 2px #34394f;
+  }
+
+  .ng-select-container {
+    width: 100%;
+    height: 58px;
+    margin: 0 0 16px;
+    padding: 0 16px 0 8px;
+    border-radius: 6px;
+    border: solid 2px #c4c4c4;
+    color: #c4c4c4;
+
+    .ng-value-container {
+      .ng-placeholder {
+        color: #c4c4c4;
+      }
+    }
+
+    @media (min-width: 555px) {
+      width: 100%;
+      margin: 0 0 16px;
+    }
+  }
+
+  .ng-input {
+    display: none;
+  }
+
+  .ng-dropdown-panel {
+    width: 100%;
+    margin: 0 0 16px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-color: #ffffff;
+    margin-top: -4px;
+    border: solid 2px #c4c4c4;
+    border-top: none;
+    color: #34394f;
+    animation: fadein 0.2s ease-in alternate;
+
+    .ng-dropdown-panel-items {
+      padding-bottom: 8px;
+
+      .ng-option {
+        display: flex;
+        align-items: center;
+        height: 58px;
+        margin: 0 8px;
+        color: #34394f;
+      }
+
+      .ng-option.ng-option-marked {
+        display: flex;
+        align-items: center;
+        margin: 0 8px;
+        border-radius: 6px;
+        color: #34394f;
+        background-color: #e9e9e9;
+      }
+    }
+
+    @media (min-width: 555px) {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* end | style for categories component */
