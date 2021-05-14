@@ -1,11 +1,7 @@
 .btn {
-  width: 100%;
+  width: 94%;
   height: 58px;
-  margin-bottom: 52px;
-  color: #ffffff;
-  background-color: #34394f;
-  border-radius: 6px;
-  border: none;
+  margin: 0 8px 52px;
   font-size: 16px;
   font-weight: 600;
   font-stretch: normal;
@@ -13,4 +9,14 @@
   line-height: 1.63;
   letter-spacing: -0.52px;
   text-align: center;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  color: #ffffff;
+  background-color: #34394f;
+
+  @media (min-width: 555px) {
+    width: 100%;
+    margin: 0 0 52px;
+  }
 }

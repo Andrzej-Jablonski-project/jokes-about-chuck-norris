@@ -1,5 +1,7 @@
 .box-joke {
-  margin: 0 0 32px 0;
+  height: 100%;
+  min-height: 66px;
+  margin: 0 8px 32px;
   font-size: 18px;
   font-weight: 600;
   font-stretch: normal;
@@ -8,4 +10,8 @@
   letter-spacing: normal;
   text-align: left;
   color: #34394f;
+
+  @media (min-width: 555px) {
+    margin: 0 0 32px;
+  }
 }

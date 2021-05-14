@@ -1,12 +1,10 @@
 .select {
   select {
-    width: 100%;
+    width: 94%;
     height: 58px;
-    margin-bottom: 16px;
+    margin: 0 8px 16px;
     padding: 16px;
     appearance: none;
-    color: #c4c4c4;
-    background-color: #ffffff;
     font-family: inherit;
     font-weight: normal;
     font-stretch: normal;
@@ -17,6 +15,8 @@
     cursor: inherit;
     border-radius: 8px;
     border: solid 1px #c4c4c4;
+    color: #c4c4c4;
+    background-color: #ffffff;
 
     &:after {
       content: "";
@@ -24,6 +24,11 @@
       height: 0.5em;
       background-color: var(--select-arrow);
       clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    }
+
+    @media (min-width: 555px) {
+      width: 100%;
+      margin: 0 0 16px;
     }
   }
 }
