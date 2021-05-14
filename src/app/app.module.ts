@@ -8,6 +8,7 @@ import { InputComponent } from './input/input.component';
 import { ButtonComponent } from './button/button.component';
 import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
+import { DownloaderComponent } from './downloader/downloader.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     JokeComponent,
     CategoriesComponent,
     InputComponent,
-    ButtonComponent
+    ButtonComponent,
+    DownloaderComponent
   ],
   imports: [
     BrowserModule,
