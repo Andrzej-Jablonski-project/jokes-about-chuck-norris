@@ -9,6 +9,8 @@ import { ButtonComponent } from './button/button.component';
 import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DownloaderComponent } from './downloader/downloader.component';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { DownloaderComponent } from './downloader/downloader.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgSelectModule,
+    FormsModule,
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
