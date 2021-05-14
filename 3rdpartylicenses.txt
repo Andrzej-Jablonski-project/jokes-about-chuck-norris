@@ -4,7 +4,13 @@ MIT
 @angular/core
 MIT
 
+@angular/forms
+MIT
+
 @angular/platform-browser
+MIT
+
+@ng-select/ng-select
 MIT
 
 rxjs
