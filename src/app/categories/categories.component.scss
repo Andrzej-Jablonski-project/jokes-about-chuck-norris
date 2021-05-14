@@ -25,6 +25,11 @@
       background-color: var(--select-arrow);
       clip-path: polygon(100% 0%, 0 0%, 50% 100%);
     }
+    &:focus {
+      outline: none;
+      border-radius: 6px;
+      border: solid 2px #34394f;
+    }
 
     @media (min-width: 555px) {
       width: 100%;

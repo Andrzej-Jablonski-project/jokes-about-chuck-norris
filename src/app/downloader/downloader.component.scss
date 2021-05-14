@@ -37,6 +37,14 @@
     border: none;
     border-radius: 50%;
     background-color: #f5f6f8;
+
+    &:focus {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      background-color: #bdbdbd;
+    }
   }
 
   &__input {
@@ -83,6 +91,12 @@
   border-radius: 6px;
   color: #34394f;
   background-color: #f5f6f8;
+
+  &:focus {
+    outline: none;
+    border-radius: 6px;
+    border: solid 2px #34394f;
+  }
 
   @media (min-width: 555px) {
     width: 285px;

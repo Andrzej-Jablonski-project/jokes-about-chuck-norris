@@ -15,6 +15,12 @@
   color: #ffffff;
   background-color: #34394f;
 
+  &:focus {
+    outline: none;
+    border-radius: 6px;
+    border: solid 2px #c4c4c4;
+  }
+
   @media (min-width: 555px) {
     width: 100%;
     margin: 0 0 52px;
