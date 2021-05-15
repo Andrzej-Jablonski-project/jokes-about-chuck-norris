@@ -20,3 +20,50 @@
     margin: 0 0 32px;
   }
 }
+
+.box-joke {
+  height: 66px;
+  margin: 0 8px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #34394f;
+  overflow: auto;
+
+  @media (min-width: 555px) {
+    margin: 0 0 32px;
+  }
+}
+
+.btn {
+  width: 94%;
+  height: 58px;
+  margin: 0 8px 52px;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: -0.52px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  color: #ffffff;
+  background-color: #34394f;
+
+  &:focus {
+    outline: none;
+    border-radius: 6px;
+    border: solid 2px #c4c4c4;
+  }
+
+  @media (min-width: 555px) {
+    width: 100%;
+    margin: 0 0 52px;
+  }
+}
