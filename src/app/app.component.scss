@@ -11,3 +11,12 @@
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
   }
 }
+
+.wrap-joke {
+  height: 66px;
+  margin: 0 8px 32px;
+
+  @media (min-width: 555px) {
+    margin: 0 0 32px;
+  }
+}

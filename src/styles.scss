@@ -124,7 +124,7 @@ body {
     border: solid 2px #c4c4c4;
     border-top: none;
     color: #34394f;
-    animation: fadein 0.2s ease-in alternate;
+    animation: fadein 0.2s ease-in alternate both;
 
     .ng-dropdown-panel-items {
       padding-bottom: 8px;
