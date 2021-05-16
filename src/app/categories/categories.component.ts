@@ -11,8 +11,7 @@ export class CategoriesComponent implements OnInit {
 
   selectedCategory: Categories;
 
-  @Output()
-  eventSelect = new EventEmitter<string>();
+  @Output() eventSelect = new EventEmitter<string>();
 
   categories = [
     { id: 1, name: 'Explicit' },
@@ -26,6 +25,5 @@ export class CategoriesComponent implements OnInit {
 
   getSelectValue(event: Categories): void {
     this.eventSelect.emit(event.name.toLocaleLowerCase());
-    console.log(event.name);
   }
 }

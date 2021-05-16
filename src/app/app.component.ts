@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
     } else {
       this.joke$ = this.dataService.getJoke();
     }
-    console.log(this.category);
   }
 
   getSelectedValue(category: any): void {
