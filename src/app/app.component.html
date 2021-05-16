@@ -1,10 +1,10 @@
 <div class="main-content">
-  <app-photo></app-photo>
+  <app-photo [actualCover]="viewCover"></app-photo>
   <div class="wrap-joke">
     <p class="box-joke" *ngIf="joke$ | async as joke">{{ joke.joke }}</p>
   </div>
   <app-categories (eventSelect)="getSelectedValue($event)"></app-categories>
-  <app-input></app-input>
-  <button class="btn" (click)="refreshJoke()">Draw a random Chuck Norris Joke</button>
+  <app-input (keyup)="changeName($event)"></app-input>
+  <button class="btn" (click)="refreshJoke()">Draw a {{firstName}} {{lastName}} joke</button>
   <app-downloader></app-downloader>
 </div>
