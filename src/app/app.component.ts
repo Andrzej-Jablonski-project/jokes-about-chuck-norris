@@ -11,6 +11,7 @@ import { DataService } from './services/data.service';
 export class AppComponent implements OnInit {
 
   joke$: Observable<Joke[]>;
+  category: string;
 
   constructor(private dataService: DataService) { }
 
@@ -19,6 +20,17 @@ export class AppComponent implements OnInit {
   }
 
   refreshJoke(): void {
-    this.joke$ = this.dataService.getJoke();
+    if (this.category === 'explicit') {
+      this.joke$ = this.dataService.getJokeExplicit();
+    } else if (this.category === 'nerdy') {
+      this.joke$ = this.dataService.getJokeNerdy();
+    } else {
+      this.joke$ = this.dataService.getJoke();
+    }
+    console.log(this.category);
+  }
+
+  getSelectedValue(category: any): void {
+    this.category = category;
   }
 }

@@ -19,4 +19,14 @@ export class DataService {
     return this.http.get<JokeResult>(`${this.API_BASE_URL}/jokes/random`)
       .pipe(map(result => result.value));
   }
+
+  getJokeNerdy(): Observable<Joke[]> {
+     return this.http.get<JokeResult>(`${this.API_BASE_URL}/jokes/random?limitTo=[nerdy]`)
+      .pipe(map(result => result.value));
+  }
+
+  getJokeExplicit(): Observable<Joke[]> {
+    return this.http.get<JokeResult>(`${this.API_BASE_URL}/jokes/random?limitTo=[explicit]`)
+     .pipe(map(result => result.value));
+ }
 }

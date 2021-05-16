@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Categories } from './../models/categories';
+import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-categories',
@@ -6,13 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
+
+  selectedCategory: Categories;
+
+  @Output()
+  eventSelect = new EventEmitter<string>();
+
   categories = [
-    { name: 'Explicit' },
-    { name: 'Nerdy' },
+    { id: 1, name: 'Explicit' },
+    { id: 2, name: 'Nerdy' },
   ];
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  getSelectValue(event: Categories): void {
+    this.eventSelect.emit(event.name.toLocaleLowerCase());
+    console.log(event.name);
+  }
 }

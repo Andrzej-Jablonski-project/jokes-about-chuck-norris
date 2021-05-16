@@ -1,4 +1,3 @@
-<ng-select class="main" [items]="categories" bindLabel="name" placeholder="Categories">
+<ng-select (change)="getSelectValue($event)" [(ngModel)]="selectedCategory" class="main" [items]="categories"
+bindLabel="name" bindValue="id" placeholder="Categories" [clearable]="false" [searchable]="false">
 </ng-select>
-
-
