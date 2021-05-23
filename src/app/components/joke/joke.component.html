@@ -1,0 +1,10 @@
+<div class="main-content">
+  <app-photo [nameOfInput]="name"></app-photo>
+  <div class="wrap-joke">
+    <p class="box-joke" *ngIf="joke$ | async as joke">{{ joke.joke }}</p>
+  </div>
+  <app-categories (eventSelect)="getSelectedValue($event)"></app-categories>
+  <input [(ngModel)]="name" (ngModelChange)="changeName($event)" class="input-name" type="text" id="name" name="name" placeholder="Impersonate Chuck Norris">
+  <button class="btn" (click)="refreshJoke(name)">Draw a {{firstName}} {{lastName}} joke</button>
+  <app-downloader></app-downloader>
+</div>

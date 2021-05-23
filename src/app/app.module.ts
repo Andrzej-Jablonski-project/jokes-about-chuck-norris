@@ -1,30 +1,36 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { PhotoComponent } from './photo/photo.component';
-import { CategoriesComponent } from './categories/categories.component';
-import { InputComponent } from './input/input.component';
-import { DataService } from './services/data.service';
+import { PhotoComponent } from './components/photo/photo.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { JokeService } from './services/joke.service';
 import { HttpClientModule } from '@angular/common/http';
-import { DownloaderComponent } from './downloader/downloader.component';
+import { DownloaderComponent } from './components/downloader/downloader.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
+import { JokeComponent } from './components/joke/joke.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
     PhotoComponent,
     CategoriesComponent,
-    InputComponent,
-    DownloaderComponent
+    DownloaderComponent,
+    JokeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     NgSelectModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatSelectModule,
   ],
-  providers: [DataService],
+  providers: [JokeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
