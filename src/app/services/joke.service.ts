@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 import { Joke } from '../models/joke';
 import { JokeResult } from '../models/joke-result';
 import { API_BASE_URL } from '../const/assets';
-import { JokeSingleResult } from '../models/joke.single-result';
+import { JokeSingleResult } from '../models/joke-single-result';
 
 @Injectable({
   providedIn: 'root'
