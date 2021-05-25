@@ -1,3 +1,4 @@
+import { Joke } from 'src/app/models/joke';
 import { Component, OnInit } from '@angular/core';
 import { JokeService } from '../../services/joke.service';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -43,8 +44,8 @@ export class JokeComponent implements OnInit {
   }
 
   private getJoke(option: string): void {
-    this.dataService.getData(option).subscribe({
-      next: (data: any) => {
+    this.dataService.getSingleData(option).subscribe({
+      next: (data: Joke) => {
         this.joke = data.joke;
       },
       complete: () => {},
