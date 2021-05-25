@@ -1,7 +1,7 @@
 <div class="main-content">
   <app-photo [nameOfInput]="name"></app-photo>
   <div class="wrap-joke">
-    <p class="box-joke" *ngIf="joke$ | async as joke">{{ joke.joke }}</p>
+    <p class="box-joke">{{ joke }}</p>
   </div>
   <app-categories (eventSelect)="getSelectedValue($event)"></app-categories>
   <input [(ngModel)]="name" (ngModelChange)="changeName($event)" class="input-name" type="text" id="name" name="name" placeholder="Impersonate Chuck Norris">

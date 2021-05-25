@@ -1,7 +1,7 @@
+import { Joke } from './../../models/joke';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Joke } from '../../models/joke';
 import { JokeService } from '../../services/joke.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-joke',
@@ -10,20 +10,20 @@ import { JokeService } from '../../services/joke.service';
 })
 export class JokeComponent implements OnInit {
 
-  joke$: Observable<Joke[]>;
-  category: string;
-  firstName = 'Chuck';
-  lastName = 'Norris';
-  name = '';
+  public joke: string;
+  private category: string;
+  public firstName = 'Chuck';
+  public lastName = 'Norris';
+  public name = '';
 
   constructor(private dataService: JokeService) {
   }
 
   ngOnInit(): void {
-    this.joke$ = this.dataService.getJoke('');
+    this.getJoke('');
   }
 
-  refreshJoke(name: string): void {
+  public refreshJoke(name: string): void {
     const categories = {
       nerdy: '?limitTo=[nerdy]',
       explicit: '?limitTo=[explicit]',
@@ -31,23 +31,36 @@ export class JokeComponent implements OnInit {
     const person = `?firstName=${this.firstName}&lastName=${this.lastName}`;
 
     if (this.category === 'explicit') {
-      this.joke$ = this.dataService.getJoke(categories.explicit);
+      this.getJoke(categories.explicit);
     } else if (this.category === 'nerdy') {
-      this.joke$ = this.dataService.getJoke(categories.nerdy);
+      this.getJoke(categories.nerdy);
     } else {
-      this.joke$ = this.dataService.getJoke('');
+      this.getJoke('');
     }
 
-    if (this.firstName !== 'Chuck'){
-      this.joke$ = this.dataService.getJoke(person);
+    if (this.name !== ''){
+      this.getJoke(person);
     }
   }
 
-  getSelectedValue(category: string): void {
+  private getJoke(option: string): void {
+    this.dataService.getData(option).subscribe({
+      next: (data: any) => {
+        this.joke = data.joke;
+      },
+      complete: () => {},
+      error: (err: HttpErrorResponse) => {
+        console.log(err);
+        this.joke = `Status ${err.status}, ${err.statusText}, try again later`;
+      },
+    });
+  }
+
+  public getSelectedValue(category: string): void {
     this.category = category;
   }
 
-  changeName(event: string): void {
+  public changeName(event: string): void {
     this.name = event;
     const fullName: string[] = event.split(' ');
     this.firstName = fullName[0] || 'Chuck';

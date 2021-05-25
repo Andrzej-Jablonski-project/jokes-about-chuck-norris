@@ -6,13 +6,17 @@ import { covers } from 'src/app/const/assets';
   templateUrl: './photo.component.html',
   styleUrls: ['./photo.component.scss']
 })
-export class PhotoComponent implements OnChanges {
+export class PhotoComponent implements OnInit, OnChanges {
 
   constructor() { }
 
   viewCover: string;
 
   @Input() nameOfInput: string;
+
+  ngOnInit(): void {
+
+  }
 
   ngOnChanges(): void {
     if (this.nameOfInput !== ''){

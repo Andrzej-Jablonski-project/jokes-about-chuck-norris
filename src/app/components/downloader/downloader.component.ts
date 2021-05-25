@@ -20,12 +20,12 @@ export class DownloaderComponent implements OnInit {
   }
 
   public getJokes(): void {
-      this.dataService.getJoke(`/${this.counter}`).subscribe( {
+      this.dataService.getData(`/${this.counter}`).subscribe( {
         next: (data: Joke[]) =>  {
           this.jokes = data.map( (joke: Joke, index: number) => `${index + 1}. ${joke.joke} \n` );
         },
         complete: () => { this.saveJokes(); },
-        error: () => {}
+        error: (err) => { console.log(err.ok); }
       });
   }
 

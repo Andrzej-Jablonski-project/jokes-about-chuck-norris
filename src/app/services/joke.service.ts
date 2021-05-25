@@ -14,7 +14,7 @@ export class JokeService {
   constructor(private http: HttpClient) {
   }
 
-  getJoke(option: string): Observable<Joke[]> {
+  getData(option: string): Observable<Joke[]> {
     return this.http.get<JokeResult>(`${API_BASE_URL}${option}`)
       .pipe(map(result => result.value));
   }
