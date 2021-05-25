@@ -63,9 +63,6 @@ THE SOFTWARE.
 @angular/platform-browser
 MIT
 
-@ng-select/ng-select
-MIT
-
 file-saver
 MIT
 The MIT License
