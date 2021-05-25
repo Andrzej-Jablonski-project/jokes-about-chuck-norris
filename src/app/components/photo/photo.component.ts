@@ -19,6 +19,10 @@ export class PhotoComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
+    this.changeCover();
+  }
+
+  private changeCover(): void{
     if (this.nameOfInput !== ''){
       this.viewCover = covers.random;
     } else {

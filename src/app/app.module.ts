@@ -6,12 +6,11 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { JokeService } from './services/joke.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DownloaderComponent } from './components/downloader/downloader.component';
-import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
 import { JokeComponent } from './components/joke/joke.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import {MatSelectModule} from '@angular/material/select';
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgSelectModule,
     FormsModule,
     BrowserAnimationsModule,
     MatFormFieldModule,

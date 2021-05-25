@@ -25,11 +25,11 @@ export class DownloaderComponent implements OnInit {
           this.jokes = data.map( (joke: Joke, index: number) => `${index + 1}. ${joke.joke} \n` );
         },
         complete: () => { this.saveJokes(); },
-        error: (err) => { console.log(err.ok); }
+        error: (err) => { console.error(err); }
       });
   }
 
-  protected saveJokes(): void {
+  private saveJokes(): void {
     const blob = new Blob([`${this.jokes.join('')}`], {type: 'text/plain;charset=utf-8'});
     FileSaver.saveAs(blob, 'jokes.txt');
   }

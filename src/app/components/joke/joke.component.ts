@@ -1,4 +1,3 @@
-import { Joke } from './../../models/joke';
 import { Component, OnInit } from '@angular/core';
 import { JokeService } from '../../services/joke.service';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -50,7 +49,7 @@ export class JokeComponent implements OnInit {
       },
       complete: () => {},
       error: (err: HttpErrorResponse) => {
-        console.log(err);
+        console.error(err);
         this.joke = `Status ${err.status}, ${err.statusText}, try again later`;
       },
     });
