@@ -1,17 +1,16 @@
 <div class="wrapper">
-  <div class="number-of-jokes">
-    <div class="button-wrap">
-      <button class="number-of-jokes__button">
+  <div [ngClass]="{'overCount': counter > 20}" class="number-of-jokes">
+    <div class="button-wrap-left">
+      <button class="number-of-jokes__button" (click)="decreaseCount()">
         <img src="assets/minus.svg" alt="">
       </button>
     </div>
-    <input class="number-of-jokes__input" id="jokeNum" type="number" value="0">
-    <div class="button-wrap">
-      <button class="number-of-jokes__button">
+    <input [ngClass]="{'overCount': counter > 20}" class="number-of-jokes__input" id="jokeNum" type="number" value="{{counter}}">
+    <div class="button-wrap-right">
+      <button class="number-of-jokes__button" (click)="increaseCount()">
         <img src="assets/plus.svg" alt="">
       </button>
     </div>
   </div>
-  <button class="save-button">Save Jokes</button>
+  <button [disabled]="counter === 0 || counter > 20" [ngClass]="{'active': counter > 0}" (click)="getJokes()" class="save-button">Save Jokes</button>
 </div>
-

@@ -13,15 +13,17 @@
   }
 }
 
-.button-wrap {
+.button-wrap-left {
   padding: 16px;
-  border-top-right-radius: 6px;
   border-top-left-radius: 6px;
-  border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
-  background-color: #f5f6f8;
 }
 
+.button-wrap-right {
+  padding: 16px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
 .number-of-jokes {
   width: 100%;
   height: 58px;
@@ -32,11 +34,11 @@
   background-color: #f5f6f8;
 
   &__button {
+    display: flex;
     padding: 0;
     cursor: pointer;
     border: none;
     border-radius: 50%;
-    background-color: #f5f6f8;
 
     &:focus {
       display: flex;
@@ -101,4 +103,13 @@
   @media (min-width: 555px) {
     width: 285px;
   }
+}
+
+.active {
+  color: #f5f6f8;
+  background-color: #34394f;
+}
+
+.overCount {
+  background-color: RGBA(255, 58, 25, 0.3);
 }
