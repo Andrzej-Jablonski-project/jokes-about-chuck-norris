@@ -9,7 +9,7 @@
 
 .box-joke {
   height: 66px;
-  margin: 0 8px 32px;
+  margin: 0;
   font-size: 18px;
   font-weight: 600;
   font-stretch: normal;
@@ -26,11 +26,11 @@
 }
 
 .input-name {
-  width: 94%;
+  width: 96%;
   height: 58px;
   display: flex;
   justify-content: center;
-  margin: 0 8px 32px;
+  margin: 0 6px 32px;
   padding: 16px;
   border-radius: 6px;
   border: solid 2px #c4c4c4;
@@ -54,7 +54,7 @@
 }
 
 .btn {
-  width: 94%;
+  width: 96%;
   height: 58px;
   margin: 0 8px 52px;
   font-size: 16px;
